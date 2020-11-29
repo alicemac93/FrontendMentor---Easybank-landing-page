@@ -1,0 +1,83 @@
+nav {
+    ul {
+        width: 400px;
+    }
+    nav li {
+        display: inline;
+        padding: 0 1.5%;
+        nav li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: grey;
+            transition: color 800ms ease-in-out;
+            nav li a:hover {
+                cursor: pointer;
+                color: black;
+            }
+        }
+    }
+}
+
+.cta {
+    background: linear-gradient(90deg, hsl(136, 65%, 51%) ,hsl(192, 70%, 51%));
+    width: 140px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    .cta:hover {
+        cursor: pointer;
+    }
+}
+
+#intro {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-position: 480% 110%;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 800px;
+    display: flex;
+    padding: 30px 0;
+    overflow: hidden;
+    #intro p {
+        padding: 8% 0;
+    };
+    #intro img {
+        position: relative;
+        right: -18%;
+        top: -12%;
+        overflow: hidden;
+    };
+}
+
+#articles{
+    background-color: hsl(0, 0%, 98%);
+    padding: 10% 10%;
+}
+article {
+    width: 100%;
+    margin: 0 1%;
+    background-color: white;
+    font-size: 1rem;
+    article a {
+        color: black;
+        text-decoration: none;
+    };
+    article a:hover {
+        color: hsl(136, 65%, 51%);
+        cursor: pointer;
+        transition: color 300ms linear;
+    };
+    .articles-content {
+        padding: 10px;
+        
+    };
+    article p {
+        font-size: 16px;
+    };
+    article img {
+        width: 100%;
+    };
+}

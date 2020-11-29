@@ -1,0 +1,260 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Public Sans";
+    font-size: 18px;
+}
+
+p {
+    line-height: 2rem;
+    color: grey;
+}
+li {
+    list-style: none;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+}
+
+nav ul {
+    width: 400px;
+}
+nav li {
+    display: inline;
+    padding: 0 1.5%;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: grey;
+    transition: color 800ms ease-in-out;
+}
+
+nav li a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.cta {
+    background: linear-gradient(90deg, hsl(136, 65%, 51%) ,hsl(192, 70%, 51%));
+    width: 140px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+}
+
+.cta:hover {
+    cursor: pointer;
+}
+
+#intro {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-attachment: scroll;
+    background-position: 400% 110%;
+    background-repeat: no-repeat;
+    height: 650px;
+}
+
+.intro-container{
+    display: flex;
+}
+
+#intro p {
+    padding: 8% 0;
+}
+
+.intro-content{
+    padding: 10% 9%;
+    flex: 0 0 50%;
+}
+
+.intro-img{
+  flex: 0 0 50%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#intro img {
+    position: relative;
+    right: -18%;
+    top: -7%;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+#features {
+
+}
+#articles{
+    background-color: hsl(0, 0%, 98%);
+}
+.section-container{
+    padding: 10% 10%;
+}
+
+.features-container,
+.articles-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.feature-item {
+    padding: 0 1%;
+    flex: 0 0 25%;
+}
+
+.feature-item h3 {
+padding: 5% 0;    
+font-weight: 400 ;
+}
+
+article {
+    flex: 0 0 25%;
+    margin: 0 1%;
+    background-color: white;
+    font-size: 1rem;
+}
+
+article a {
+    color: black;
+    text-decoration: none;
+}
+article a:hover {
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+    transition: color 300ms linear;
+}
+.articles-content {
+    padding: 10px;  
+}
+article p {
+    font-size: 16px;
+}
+/* div for an image with specified height */
+
+article img {
+    width: 100%;
+}
+
+.reference {
+    font-size: 12px;
+}
+
+.footer-container {
+    padding: 2% 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    background-color: hsl(233, 26%, 24%);
+}
+
+.light {    /*change*/
+    fill: white;
+}
+
+.socials li {
+    display: inline;
+}
+
+footer li{
+    padding: 3%;
+    }
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/* why doesnt this work? */
+.icon:hover {
+    fill: hsl(136, 65%, 51%)!important;
+
+}
+footer a:hover{
+    color:hsl(136, 65%, 51%);
+    transition: all 500ms;
+}
+
+.footer-col{
+    flex: 0 0 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-col-last{
+    flex: 0 0 40%;
+    text-align: right;
+}
+
+
+@media screen and (max-width: 740px){
+
+    .intro-container{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    #intro img{
+        overflow: hidden;
+        right: 0;
+        top: -100px;
+    }
+    .features-container,
+    .articles-container{
+        flex-direction: column;
+        width: 100%;
+        align-items: center
+    }
+    .features-container{
+    text-align: center;
+    }
+    .footer-container{
+        text-align: center;
+        display: block;
+        padding: 5%;
+    }
+    footer li,
+     a {
+        padding: 2%;
+        color: white;
+        text-decoration: none;
+    }
+  
+    .footer-col-last{
+        text-align: center;
+        padding: 5%;
+    }
+    .socials li {
+        padding: 0;
+    }
+    .nav-desktop{
+        display: none;
+    }
+    
+}
