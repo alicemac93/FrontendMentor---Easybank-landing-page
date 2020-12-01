@@ -20,11 +20,11 @@ li {
     list-style: none;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 3em;
     font-weight: 400;
 }
 
-header {
+header{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -33,6 +33,14 @@ header {
     background-color: white;
     position: fixed;
     z-index: 10;
+    align-items: center;
+}
+
+.desktop-nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -67,33 +75,62 @@ nav li a:hover {
 .cta:hover {
     cursor: pointer;
 }
-
-#intro {
-    background-color: hsl(0, 0%, 98%);
-    background-image: url(./images/bg-intro-desktop.svg);
-    background-attachment: scroll;
-    background-position: 400% 110%;
-    background-repeat: no-repeat;
-    height: 650px;
+.mobile-nav-container{
+    display:none;
+    position: absolute;
+    text-align: center;
+    left: 0; 
+    right: 0; 
+    margin-top: 270px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 90%;
+    background-color: white;
+    border-radius: 12.5px;
+    box-shadow: 0px 30px 200px black;
+}
+.mobile-nav-container li{
+    padding: 10px;
+}
+.mobile-nav-container li a{
+    text-decoration: none;
+    color: hsl(233, 26%, 24%)
 }
 
+.active{
+    display: block;
+
+}
+/* intro */
+
+#intro {
+    height: 650px;
+    background-color: hsl(0, 0%, 98%);
+}
 .intro-container{
     display: flex;
 }
-
 #intro p {
     padding: 8% 0;
 }
-
 .intro-content{
-    padding: 10% 9%;
+    padding: 10% 10% 5% 10%;
     flex: 0 0 50%;
+    overflow: visible;
 }
+.background-wrapper{
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-position: top -150px right 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: visible;
 
+}
 .intro-img{
-  flex: 0 0 50%;
-  overflow-x: hidden;
-  position: relative;
+    flex: 0 0 50%;
+    overflow-x: hidden;
+    position: relative; 
 }
 
 #intro img {
@@ -102,14 +139,10 @@ nav li a:hover {
     top: -7%;
     max-width: 100%;
     height: auto;
-    
 }
 
-#features {
-
-}
-#articles{
-    background-color: hsl(0, 0%, 98%);
+#features{
+    background-color: hsl(220, 16%, 96%)
 }
 .section-container{
     padding: 10% 10%;
@@ -133,6 +166,9 @@ padding: 5% 0;
 font-weight: 400 ;
 }
 
+#articles {
+    background-color: hsl(0, 0%, 98%);
+}
 article {
     flex: 0 0 25%;
     margin: 0 1%;
@@ -177,6 +213,7 @@ footer {
 
 .light {    /*change*/
     fill: white;
+    padding: 5%;
 }
 
 .socials li {
@@ -213,18 +250,43 @@ footer a:hover{
     text-align: right;
 }
 
+@media screen and (min-width: 900px){
+    .toggle-nav-button{
+    display: none;
+}
+}
+@media screen and (max-width: 900px){
+    #intro img {
+        top: 0;
+    }
+    .toggle-nav-button{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+    #intro {
+        height: auto;
+    }
+    .feature-item, 
+    article {
+        padding: 2% 1%;
+        flex: 0 0 50%;
+        margin: 0;
+    }
+    .features-container, 
+    .articles-container{
+        flex-wrap: wrap;
+    }
+    .intro-content{
+        padding: 10% 2% 10% 10%
+    }
+}
 
 @media screen and (max-width: 740px){
-
-    .intro-container{
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-    #intro img{
-        overflow: hidden;
-        right: 0;
-        top: -100px;
-    }
     .features-container,
     .articles-container{
         flex-direction: column;
@@ -240,7 +302,7 @@ footer a:hover{
         padding: 5%;
     }
     footer li,
-     a {
+    footer a {
         padding: 2%;
         color: white;
         text-decoration: none;
@@ -257,4 +319,50 @@ footer a:hover{
         display: none;
     }
     
+}
+
+@media screen and (max-width: 480px) {
+
+    .intro-container{
+        flex-direction: column-reverse;
+        width: 100%;
+        text-align: center;
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    #intro{
+        background-position: right -140px top -140px;
+        background-size: 160%;
+    }
+    #intro img{
+        overflow: hidden;
+        right: 0;
+        top: -100px;
+    }
+    .intro-img{
+        height: auto;
+        flex: none;
+    }
+    .intro-content{
+        padding: 0 4% 5%;
+    }
+
+    .section-container{
+        text-align: center;
+        padding: 10% 5%;
+    }
+    #features h2 {
+        font-weight: 400;
+        padding: 10%;
+    }
+    article{
+        margin: 3% 2%;
+        text-align: left;
+    }
+    .footer-col{
+        display: block;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    
+
 }
