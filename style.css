@@ -104,7 +104,7 @@ nav li a:hover {
 /* intro */
 
 #intro {
-    height: 650px;
+    height: 700px;
     background-color: hsl(0, 0%, 98%);
 }
 .intro-container{
@@ -350,6 +350,7 @@ footer a:hover{
         padding: 10% 5%;
     }
     #features h2 {
+        font-size: 2rem;
         font-weight: 400;
         padding: 10%;
     }
